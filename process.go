@@ -9,34 +9,34 @@ import (
 	"time"
 )
 
-type Size struct {
+type size struct {
 	w int
 	h int
 }
 
-var all []Size
+var all []size
 
 func main() {
 	start := time.Now()
 
-	all := []Size{
-		Size{
+	all := []size{
+		size{
 			w: 100,
 			h: 100,
 		},
-		Size{
+		size{
 			w: 200,
 			h: 200,
 		},
-		Size{
+		size{
 			w: 300,
 			h: 300,
 		},
-		Size{
+		size{
 			w: 400,
 			h: 400,
 		},
-		Size{
+		size{
 			w: 500,
 			h: 500,
 		},
@@ -63,5 +63,5 @@ func main() {
 
 	elapsed := time.Since(start)
 
-	fmt.Println("Resize timing millisecond : " + strconv.Itoa(int(elapsed.Nanoseconds()/1000000)))
+	fmt.Printf("Resize timing millisecond : %s\n", strconv.Itoa(int(elapsed.Nanoseconds()/1000000)))
 }
